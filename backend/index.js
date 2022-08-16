@@ -3,12 +3,13 @@ require("./db/config");
 const app = express();
 const cors = require("cors");
 
+
+
 const Jwt = require("jsonwebtoken");
 const jwtKey = "e-comm";
 
 const User = require("./db/User");
 const Product = require("./db/Product");
-// const Product = require("./product");
 
 app.use(express.json());
 app.use(cors());
@@ -119,3 +120,4 @@ function verifyToken(req, resp, next) {
 }
 
 app.listen(5000);
+
